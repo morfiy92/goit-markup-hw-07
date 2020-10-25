@@ -1,0 +1,72 @@
+.footer-right-side {
+	margin-left: 70px;
+	margin-top: 12px;
+}
+
+.logo-footer {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.logo-footer-web {
+	font-family: var(--secondary-font);
+	font-style: normal;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.192;
+	letter-spacing: 0.03em;
+	color: var(--accent-color);
+}
+
+.logo-footer-studio-white {
+	font-family: var(--secondary-font);
+	font-style: normal;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.192;
+	letter-spacing: 0.03em;
+	color: var(--third-color);
+}
+
+.address-footer-list-item {
+	display: block;
+}
+
+.address-footer-list-item:not(:last-child) {
+	margin-bottom: 9px;
+}
+
+.address-footer-map-link {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.714;
+	letter-spacing: 0.03em;
+	color: var(--third-color);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-footer-mail-link,
+.address-footer-tel-link {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.714;
+	letter-spacing: 0.03em;
+	color: rgba(255, 255, 255, 0.6);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*.address-footer-map-link:hover,
+.address-footer-map-link:focus,
+.address-footer-mail-link:hover,
+.address-footer-mail-link:focus,
+.address-footer-tel-link:hover,
+.address-footer-tel-link:focus {
+	color: var(--third-color);
+}*/
+
+.address-footer {
+	width: 231px;
+	height: 81px;
+}
