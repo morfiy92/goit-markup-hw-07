@@ -18,29 +18,29 @@
 .footer-social-list {
 	display: flex;
 	justify-content: space-around;
-}
 
-.footer-social-list-link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 44px;
-	height: 44px;
-	border-radius: 50%;
-	background: rgba(255, 255, 255, 0.1);
-	transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+	&-link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.1);
+		transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-.footer-social-list-svg {
-	width: 20px;
-	height: 20px;
-	fill: var(--third-color);
-}
+		&:hover {
+			background-color: var(--accent-color);
+		}
+	}
 
-.footer-social-list-link:hover .footer-social-list-svg {
-	fill: var(--third-color);
-}
+	&-svg {
+		width: 20px;
+		height: 20px;
+		fill: var(--third-color);
 
-.footer-social-list-link:hover {
-	background-color: var(--accent-color);
+		.footer-social-list-link:hover & {
+			fill: var(--third-color);
+		}
+	}
 }

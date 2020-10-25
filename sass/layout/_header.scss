@@ -1,89 +1,54 @@
 .header {
 	padding: 25px 0;
 	border: 1px solid #ececec;
-}
 
-.header .conteiner {
-	display: flex;
-	align-items: center;
-}
-
-.header .address {
-	margin-left: auto;
-}
-
-.address-list-item:not(:last-child) {
-	margin-right: 50px;
-}
-
-.navigation {
-	display: flex;
-	align-items: center;
-}
-
-.navigation-list {
-	display: flex;
-}
-
-.address-list {
-	display: flex;
-	align-items: center;
+	& .address {
+		margin-left: auto;
+	}
 }
 
 .logo {
 	margin-right: 90px;
 }
 
-.navigation-list-item:not(:last-child) {
-	margin-right: 50px;
+.navigation {
+	display: flex;
+	align-items: center;
+
+	&-list {
+		display: flex;
+
+		&-item:not(:last-child) {
+			margin-right: 50px;
+		}
+
+		&-link {
+			position: relative;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 1.143;
+			letter-spacing: 0.02em;
+			color: var(--main-color);
+			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+			&:hover,
+			&:focus {
+				color: var(--accent-color);
+				cursor: pointer;
+			}
+		}
+	}
 }
 
-.logo-web {
-	font-family: var(--secondary-font);
-	font-style: normal;
-	font-weight: 700;
-	font-size: 26px;
-	line-height: 1.192;
-	letter-spacing: 0.03em;
-	color: var(--accent-color);
+.address-list {
+	display: flex;
+	align-items: center;
+
+	&-item:not(:last-child) {
+		margin-right: 50px;
+	}
 }
 
-.logo-studio-black {
-	font-family: var(--secondary-font);
-	font-style: normal;
-	font-weight: 700;
-	font-size: 26px;
-	line-height: 1.192;
-	letter-spacing: 0.03em;
-	color: var(--main-color);
-}
-
-.navigation-list-link {
-	position: relative;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.143;
-	letter-spacing: 0.02em;
-	color: var(--main-color);
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.underline::after {
-	position: absolute;
-	bottom: -32px;
-	display: block;
-	content: "";
-	width: 100%;
-	height: 4px;
-	background-color: var(--accent-color);
-	border-radius: 2px;
-}
-
-.underline {
-	color: var(--accent-color);
-}
-
-.address-tel-link,
 .address-mail-link {
 	font-style: normal;
 	font-weight: 500;
@@ -97,20 +62,33 @@
 	align-items: center;
 
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+		cursor: pointer;
+	}
 }
 
-.navigation-list-link:hover,
-.navigation-list-link:focus,
-.address-mail-link:hover,
-.address-mail-link:focus,
-.address-tel-link:hover,
-.address-tel-link:focus {
-	color: var(--accent-color);
-	cursor: pointer;
-}
+.address-tel-link {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.143;
+	letter-spacing: 0.02em;
+	color: var(--secondary-color);
 
-.navigation-list-link:active .navigation-list-link::after {
-	opacity: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+		cursor: pointer;
+	}
 }
 
 .address-mail-svg {
@@ -119,11 +97,11 @@
 	margin-right: 10px;
 	fill: var(--secondary-color);
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.address-mail-link:hover .address-mail-svg {
-	fill: var(--accent-color);
-	cursor: pointer;
+	.address-mail-link:hover & {
+		fill: var(--accent-color);
+		cursor: pointer;
+	}
 }
 
 .address-tel-svg {
@@ -132,9 +110,24 @@
 	margin-right: 10px;
 	fill: var(--secondary-color);
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	.address-tel-link:hover & {
+		fill: var(--accent-color);
+		cursor: pointer;
+	}
 }
 
-.address-tel-link:hover .address-tel-svg {
-	fill: var(--accent-color);
-	cursor: pointer;
+.underline {
+	color: var(--accent-color);
+
+	&::after {
+		position: absolute;
+		bottom: -32px;
+		display: block;
+		content: "";
+		width: 100%;
+		height: 4px;
+		background-color: var(--accent-color);
+		border-radius: 2px;
+	}
 }
